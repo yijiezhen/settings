@@ -41,6 +41,10 @@ set rtp+=/usr/local/opt/fzf
 map <C-f> :FZF<CR>
 map <C-x> :only<CR>
 
+let FZF_DEFAULT_COMMAND='fd --type f'
+let FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+
 nnoremap <C-e> :buffers<CR>:buffer<Space>
 
 if executable('ag')
