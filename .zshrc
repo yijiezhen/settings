@@ -1,13 +1,13 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jiyi/.oh-my-zsh
+export ZSH=/Users/jyi/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
-USER=``
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+# USER=``
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,12 +91,10 @@ source $ZSH/oh-my-zsh.sh
 
 export GOPATH=$HOME/github/go
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-export PATH=$PATH:/opt/maven/bin:$GOPATH/bin:~/bin
-export PATH=$PATH:/Users/jiyi/tools/spark-2.3.0-bin-hadoop2.7/bin
-#export CLASSPATH="/Users/jiyi/lc/perf-tool/TDA/lib/*"
-export GROOVY_HOME=/Users/jiyi/.sdkman/candidates/groovy/current/
+export PATH=$PATH:/opt/maven/bin:$GOPATH/bin:~/bin:/usr/local/bin
+export GROOVY_HOME=/Users/jyi/.sdkman/candidates/groovy/current/
 export PATH=$GROOVY_HOME/bin:~/Library/Python/2.7/bin:$PATH
-export MAVEN_OPTS='-Xmx3g -XXaltjvm=dcevm -Duser.language=en -Duser.country=us -javaagent:/Users/jiyi/Tools/hotswap/hotswap-agent.jar=autoHotswap=true -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000'
+export MAVEN_OPTS='-Xmx3g -XXaltjvm=dcevm -Duser.language=en -Duser.country=us -javaagent:/Users/jyi/Tools/hotswap/hotswap-agent.jar=autoHotswap=true -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000'
 #export MAVEN_OPTS='-Xmx3g -XX:MaxPermSize=256m -Duser.language=en -Duser.country=us -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000'
 alias i="mvn clean install -Dmaven.test.skip=true"
 alias iu="mvn clean install -U -Dmaven.test.skip=true -DskipTests -Djavax.xml.accessExternalSchema=all"
@@ -112,38 +110,36 @@ alias ga="git add ."
 alias gp="git push"
 alias g="groovy"
 alias gdl="gradle"
-alias ts-viewer='cd /Users/jiyi/lc/ts-viewer;./ts-viewer'
 alias gct='git checkout --track -b'
 alias f='flutter'
 alias mm='mvim'
 alias a='cd ~/a'
 alias b='cd ~/b'
 alias gf="git push -f"
-# export MAVEN_OPTS='-Xmx2g -XX:NativeMemoryTracking=summary -XX:MaxPermSize=256m -XX:+PrintReferenceGC -XX:+PrintStringTableStatistics -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:NativeMemoryTracking=summary -Duser.language=en -Duser.country=us -javaagent:/Users/jiyi/Tools/hotswap/hotswap-agent.jar=autoHotswap=true -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000'
+alias vim="/usr/local/Cellar/vim/8.1.1450/bin/vim"
+alias vi="/usr/local/Cellar/vim/8.1.1450/bin/vim"
+# export MAVEN_OPTS='-Xmx2g -XX:NativeMemoryTracking=summary -XX:MaxPermSize=256m -XX:+PrintReferenceGC -XX:+PrintStringTableStatistics -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:NativeMemoryTracking=summary -Duser.language=en -Duser.country=us -javaagent:/Users/jyi/Tools/hotswap/hotswap-agent.jar=autoHotswap=true -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000'
 
-alias lc_gg='~/Tools/sqlcl/bin/sql lc_jiyi/Pers#123@lcscrubgg.tlcinternal.com/LCSCRUBGG.lendingclub.com'
-alias lc_qa='~/Tools/sqlcl/bin/sql tlc/tlc@lcqa.tlcinternal.com/LCQA_A.lendingclub.com'
-alias lc_demo='~/Tools/sqlcl/bin/sql tlc/tlc@lcdemo.tlcinternal.com/LCDEMO.lendingclub.com'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias cql='~/Tools/dse-6.0.2/bin/cqlsh'
 alias vif='vim $(fzf)'
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/jiyi/.sdkman"
-[[ -s "/Users/jiyi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jiyi/.sdkman/bin/sdkman-init.sh"
-#. /Users/jiyi/.lc2/bin/.lc2-init.sh
+export SDKMAN_DIR="/Users/jyi/.sdkman"
+[[ -s "/Users/jyi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jyi/.sdkman/bin/sdkman-init.sh"
+#. /Users/jyi/.lc2/bin/.lc2-init.sh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/jiyi/Downloads/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Users/jiyi/Downloads/google-cloud-sdk/path.zsh.inc'
+if [ -f /Users/jyi/Downloads/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/jyi/Downloads/google-cloud-sdk/path.zsh.inc'
 fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f /Users/jiyi/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Users/jiyi/Downloads/google-cloud-sdk/completion.zsh.inc'
+if [ -f /Users/jyi/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/jyi/Downloads/google-cloud-sdk/completion.zsh.inc'
 fi
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 function lb() {
 #if [ -f ~/logbook/$(date '+%Y-%m-%d').md ]; then
@@ -154,16 +150,9 @@ function lb() {
 }
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin:/Users/jiyi/lc/flutter/bin"
+export PATH="$PATH:$HOME/.rvm/bin:/Users/jyi/a/flutter/bin"
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-function cqlsh_with_host() {
-  env CQLSH_HOST=$1.lendingcloud.us cqlsh -u $2
-}
  
-function cqlsh_dev_account() {
-  env CQLSH_HOST=cassandra-dev.lendingcloud.us cqlsh --ssl -u <username> -p $MY_PASSWORD --debug
-}
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
@@ -171,4 +160,11 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export GITHUB_TOKEN=496cf5518265cf53d5b90155ddfa162f1d2dfaf6
+alias dev-tmux='tmux new-session \; split-window -h \; split-window -v \; attach'
+alias bonsai='/Users/jyi/a/bonsai/bonsai'
+alias pksd='/Users/jyi/a/pksd/pksd'
+alias t='terraform'
+alias g='hub'
 
+eval "$(direnv hook zsh)"
