@@ -21,16 +21,16 @@
     "command": "workbench.action.closeWindow",
     "when": "!editorIsOpen"
   },
-  {
-    "key": "cmd+w",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
-  },
-  {
-    "key": "cmd+w",
-    "command": "editor.action.moveSelectionToNextFindMatch",
-    "when": "editorFocus"
-  },
+  // {
+  //   "key": "cmd+w",
+  //   "command": "editor.action.addSelectionToNextFindMatch",
+  //   "when": "editorFocus"
+  // },
+  // {
+  //   "key": "cmd+w",
+  //   "command": "editor.action.moveSelectionToNextFindMatch",
+  //   "when": "editorFocus"
+  // },
   {
     "key": "ctrl+n",
     "command": "explorer.newFile"
@@ -42,5 +42,38 @@
   {
     "key": "ctrl+shift+f",
     "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "cmd+shift+a",
+    "command": "workbench.action.showCommands"
+  },
+  { "key": "f4",                    
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly" 
+  },
+  {
+    "key": "f2",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "tab",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
   }
-]
+ ]
+
